@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>trace° — @aishani.builds</title>
+<meta name="description" content="Aishani Agrawal — AI & Analytics builder. You searched her once. This is where you ended up." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     SEARCH INTRO OVERLAY
+============================================================ -->
+<div id="introOverlay" class="intro-overlay">
+  <div class="intro-logo">trace<span class="dot">°</span></div>
+  <button id="introSkip" class="intro-skip" type="button">Skip →</button>
+  <div class="intro-center">
+    <div class="search-shell">
+      <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <span id="typedQuery" class="typed-query"></span><span class="caret" aria-hidden="true"></span>
+    </div>
+
+    <div id="searchResultWrap" class="search-result-wrap" aria-live="polite">
+      <p id="resultCount" class="result-count"></p>
+      <button id="resultCard" class="result-card" type="button" aria-hidden="true">
+        <span class="result-avatar" aria-hidden="true">
+          <svg viewBox="0 0 120 120" width="52" height="52"><circle cx="60" cy="60" r="60" fill="#FFDE9E"/><circle cx="60" cy="52" r="22" fill="#2B2B2E"/><path d="M18 118c4-28 24-42 42-42s38 14 42 42" fill="#2B2B2E"/></svg>
+        </span>
+        <span class="result-text">
+          <span class="result-name">Aishani Agrawal</span>
+          <span class="result-handle">@aishani.builds</span>
+          <span class="result-tagline">AI &amp; Analytics · Builder · Future AI Product Manager</span>
+        </span>
+        <span class="result-cta">View profile →</span>
+      </button>
+    </div>
+  </div>
+  <p class="intro-tagline">find one thing. end up everywhere.</p>
+</div>
+
+<!-- ============================================================
+     NAME REVEAL
+============================================================ -->
+<div id="nameReveal" class="name-reveal" aria-hidden="true">
+  <span class="name-line">AISHANI</span>
+  <span class="name-line">AGRAWAL</span>
+</div>
+
+<!-- ============================================================
+     APP SHELL
+============================================================ -->
+<div id="app" class="app" hidden>
+
+  <aside class="sidebar" aria-label="Primary">
+    <div class="sidebar-logo">trace<span class="dot">°</span></div>
+    <nav class="side-nav" aria-label="Sections">
+      <a href="#profile" class="nav-link" data-nav><svg viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="8" r="4" fill="currentColor"/><path d="M4 20c1.5-5 6-7 8-7s6.5 2 8 7" fill="currentColor"/></svg><span>Profile</span></a>
+      <a href="#home" class="nav-link" data-nav><svg viewBox="0 0 24 24" width="18" height="18"><path d="M3 11l9-7 9 7v9a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1z" fill="currentColor"/></svg><span>Home</span></a>
+      <a href="#projects" class="nav-link" data-nav><svg viewBox="0 0 24 24" width="18" height="18"><rect x="3" y="4" width="18" height="6" rx="1.5" fill="currentColor"/><rect x="3" y="14" width="8" height="6" rx="1.5" fill="currentColor"/><rect x="13" y="14" width="8" height="6" rx="1.5" fill="currentColor"/></svg><span>Projects</span></a>
+      <a href="#skills" class="nav-link" data-nav><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z" fill="currentColor"/></svg><span>Skills</span></a>
+      <a href="#saved" class="nav-link" data-nav><svg viewBox="0 0 24 24" width="18" height="18"><path d="M6 3h12v18l-6-4-6 4z" fill="currentColor"/></svg><span>Saved</span></a>
+      <a href="#activity" class="nav-link" data-nav><svg viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Activity</span></a>
+      <a href="#contact" class="nav-link" data-nav><svg viewBox="0 0 24 24" width="18" height="18"><path d="M3 6l9 6 9-6" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Contact</span></a>
+    </nav>
+    <p class="sidebar-tagline">find one thing.<br>end up everywhere.</p>
+  </aside>
+
+  <main class="feed">
+
+    <!-- PROFILE HEADER -->
+    <section id="profile" class="section profile-header">
+      <div class="cover"></div>
+      <div class="profile-main">
+        <div class="avatar-block">
+          <span class="avatar-ring">
+            <svg viewBox="0 0 120 120" width="88" height="88"><circle cx="60" cy="60" r="60" fill="#FFDE9E"/><circle cx="60" cy="52" r="22" fill="#2B2B2E"/><path d="M18 118c4-28 24-42 42-42s38 14 42 42" fill="#2B2B2E"/></svg>
+          </span>
+          <span class="status-pill"><span class="status-dot"></span><span id="statusText">building something</span></span>
+        </div>
+
+        <div class="identity-row">
+          <div class="identity">
+            <h1 class="display-name">Aishani Agrawal</h1>
+            <p class="handle">@aishani.builds</p>
+          </div>
+          <div class="menu-wrap">
+            <button id="menuBtn" class="icon-btn" aria-haspopup="true" aria-expanded="false" aria-label="More options">⋯</button>
+            <div id="menuPopover" class="menu-popover" role="menu" hidden>
+              <button role="menuitem" data-action="copy">Copy profile link</button>
+              <button role="menuitem" data-action="github">Open GitHub</button>
+              <button role="menuitem" data-action="resume">View resume</button>
+              <button role="menuitem" data-action="stalk" class="danger">Stop stalking</button>
+            </div>
+          </div>
+        </div>
+
+        <p class="bio">AI &amp; Analytics student building small ideas into useful products. Interested in the space where code, data, AI and people collide.</p>
+
+        <div class="meta-chips">
+          <span class="chip">B.Tech (Hons) AI &amp; Analytics</span>
+          <span class="chip">Second Year</span>
+          <span class="chip chip-accent">AI Product Management →</span>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat"><strong>04</strong><span>projects investigated</span></div>
+          <div class="stat"><strong>08+</strong><span>tools collected</span></div>
+          <div class="stat"><strong>05</strong><span>certificates found</span></div>
+          <div class="stat"><strong>∞</strong><span>tabs open</span></div>
+        </div>
+
+        <div class="profile-actions">
+          <a class="btn btn-primary" href="#projects">Follow the trail</a>
+          <a class="btn btn-ghost" href="#" data-resume-link target="_blank" rel="noopener">Resume</a>
+          <a class="icon-link" href="https://github.com/aishaniag-19-07" data-github-profile target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 007.87 10.93c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.53-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 015.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.42-2.7 5.4-5.27 5.68.42.36.78 1.07.78 2.17v3.22c0 .31.21.67.8.56A11.5 11.5 0 0023.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+          </a>
+          <a class="icon-link" href="https://www.linkedin.com/in/aishani-agrawal-42b935381" data-linkedin-link target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME / DISCOVERY FEED -->
+    <section id="home" class="section home-feed">
+      <div class="feed-heading">
+        <h2><span class="strike">For You</span> Apparently, all Aishani.</h2>
+        <p class="feed-sub mono">You searched her once. The algorithm made some assumptions.</p>
+      </div>
+
+      <article class="card pinned-card">
+        <p class="card-label">Pinned thought</p>
+        <blockquote class="pinned-quote">I started with code because I wanted to know how things worked. Somewhere along the way I became more interested in why people would actually use them.</blockquote>
+        <p class="why-flip"><span class="why-a">can I build it?</span><span class="why-b">why should I build it?</span></p>
+      </article>
+
+      <article class="card searches-card">
+        <p class="card-label">Recent searches</p>
+        <ul class="search-history mono">
+          <li>aishani agrawal</li>
+          <li>aishani github</li>
+          <li>skycast project</li>
+          <li>what is @aishani.builds building now</li>
+          <li>why does she keep making things</li>
+        </ul>
+      </article>
+
+      <div class="micro-strip mono" aria-hidden="true">
+        <span>profile viewed again</span>
+        <span>you've been here before</span>
+        <span id="rabbitHoleReadout">rabbit hole: 0% complete</span>
+        <span>another tab opened</span>
+      </div>
+    </section>
+
+    <!-- POSTS / PROJECTS -->
+    <section id="projects" class="section posts-section">
+      <div class="section-heading">
+        <h2>Posts</h2>
+        <p class="section-sub mono">things @aishani.builds actually shipped</p>
+      </div>
+
+      <div class="posts-grid">
+
+        <article class="post-card pinned" data-project="skycast" tabindex="0" role="button" aria-haspopup="dialog">
+          <span class="pin-flag">📌 pinned post</span>
+          <h3>SkyCast</h3>
+          <p class="tagline">Weather that knows where you are.</p>
+          <p class="post-desc">A location-aware weather app that reads your coordinates and turns them into a live forecast — no city search required.</p>
+          <div class="mini-weather mono" aria-hidden="true">
+            <p>latitude detected</p>
+            <p>longitude detected</p>
+            <p>location permission: allowed</p>
+            <p>weather refreshed</p>
+          </div>
+          <div class="stack-row">
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Flask</span><span class="tag">Weather API</span><span class="tag">Geolocation</span><span class="tag">Supabase</span>
+          </div>
+          <div class="post-actions">
+            <button class="btn btn-small btn-primary" data-open-project="skycast">View project</button>
+            <a class="btn btn-small btn-ghost" href="https://github.com/aishaniag-19-07/Skycast" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">GitHub ↗</a>
+          </div>
+          <p class="hover-note">she checks the weather programmatically now</p>
+        </article>
+
+        <article class="post-card pinned" data-project="portgen" tabindex="0" role="button" aria-haspopup="dialog">
+          <span class="pin-flag">📌 pinned post</span>
+          <h3>PortGen <span class="pill">portfolioception</span></h3>
+          <p class="tagline">Give it text. Get a webpage.</p>
+          <p class="post-desc">Feed it a <code>.txt</code> file of your info. Gemini structures it into JSON, and that JSON becomes a full HTML portfolio — handed back to you as one file.</p>
+          <div class="pipeline mono" aria-hidden="true">
+            <span>.txt</span><span class="arrow">↓</span>
+            <span>Gemini</span><span class="arrow">↓</span>
+            <span>JSON</span><span class="arrow">↓</span>
+            <span>HTML</span><span class="arrow">↓</span>
+            <span>your portfolio.html</span>
+          </div>
+          <div class="stack-row">
+            <span class="tag">Gemini API</span><span class="tag">JSON</span><span class="tag">HTML generation</span><span class="tag">text-file processing</span>
+          </div>
+          <div class="post-actions">
+            <button class="btn btn-small btn-primary" data-open-project="portgen">View project</button>
+            <a class="btn btn-small btn-ghost" href="https://github.com/aishaniag-19-07/Portfolio_builder" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">GitHub ↗</a>
+          </div>
+          <p class="hover-note">wait... she made a portfolio maker inside her portfolio?</p>
+        </article>
+
+        <article class="post-card small" data-project="echomind" tabindex="0" role="button" aria-haspopup="dialog">
+          <span class="era-flag mono">earlier experiment</span>
+          <h3>EchoMind</h3>
+          <p class="post-desc">A lightweight conversational AI project exploring intent, scoped responses and model-driven conversation.</p>
+          <div class="stack-row">
+            <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">Gemini API</span>
+          </div>
+          <div class="post-actions">
+            <button class="btn btn-small btn-primary" data-open-project="echomind">View project</button>
+            <a class="btn btn-small btn-ghost" href="https://github.com/tanya-ag-26/sem2-tiny-project" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">GitHub ↗</a>
+          </div>
+          <p class="hover-note">yes, there was a chatbot era</p>
+        </article>
+
+        <article class="post-card small research" data-project="azure" tabindex="0" role="button" aria-haspopup="dialog">
+          <span class="era-flag mono">research / product thinking</span>
+          <h3>Azure AI Case Study</h3>
+          <p class="post-desc">A look at how Azure AI services hold up in practice — adoption, trade-offs and business use, not just technical capability.</p>
+          <div class="stack-row">
+            <span class="tag">Microsoft Azure</span><span class="tag">Cloud AI Services</span><span class="tag">Research</span><span class="tag">Presentation</span><span class="tag">Product thinking</span>
+          </div>
+          <div class="post-actions">
+            <button class="btn btn-small btn-primary" data-open-project="azure">View project</button>
+          </div>
+          <p class="hover-note">research tab unlocked</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- TAGGED / SKILLS -->
+    <section id="skills" class="section tagged-section">
+      <div class="section-heading">
+        <h2>Tagged in this profile</h2>
+        <p class="section-sub mono">things the algorithm associates with @aishani.builds</p>
+      </div>
+      <div class="tag-cloud" id="tagCloud"></div>
+    </section>
+
+    <!-- SAVED -->
+    <section id="saved" class="section saved-section">
+      <div class="section-heading">
+        <h2>Saved</h2>
+        <p class="section-sub mono">someone has been bookmarking receipts</p>
+      </div>
+      <div class="saved-grid" id="savedGrid"></div>
+    </section>
+
+    <!-- ACTIVITY -->
+    <section id="activity" class="section activity-section">
+      <div class="section-heading">
+        <h2>Recent activity</h2>
+        <p class="section-sub mono">not quite a timeline</p>
+      </div>
+      <ul class="activity-log mono" id="activityLog"></ul>
+    </section>
+
+    <!-- FINAL / CONTACT -->
+    <section id="contact" class="section final-section">
+      <p class="final-okay">Okay.</p>
+      <h2 class="final-headline">You've stalked enough.</h2>
+      <p class="final-sub">You could just talk to Aishani.</p>
+
+      <div class="final-links">
+        <a href="https://github.com/aishaniag-19-07" data-github-profile target="_blank" rel="noopener noreferrer" class="final-link">GitHub</a>
+        <a href="https://www.linkedin.com/in/aishani-agrawal-42b935381" data-linkedin-link target="_blank" rel="noopener noreferrer" class="final-link">LinkedIn</a>
+        <a href="#" data-resume-link target="_blank" rel="noopener" class="final-link">Resume</a>
+        <a href="mailto:aishaniag2410@gmail.com" class="final-link">Email</a>
+      </div>
+
+      <div class="final-identity">
+        <span class="avatar-ring small">
+          <svg viewBox="0 0 120 120" width="56" height="56"><circle cx="60" cy="60" r="60" fill="#FFDE9E"/><circle cx="60" cy="52" r="22" fill="#2B2B2E"/><path d="M18 118c4-28 24-42 42-42s38 14 42 42" fill="#2B2B2E"/></svg>
+        </span>
+        <div>
+          <p class="final-name">Aishani Agrawal</p>
+          <p class="final-handle mono">@aishani.builds</p>
+        </div>
+      </div>
+
+      <footer class="site-footer">
+        <p>designed, built &amp; probably overthought by Aishani</p>
+        <p class="mono end-tag">end of rabbit hole</p>
+      </footer>
+    </section>
+
+  </main>
+
+  <nav class="mobile-nav" aria-label="Sections">
+    <a href="#home" data-nav aria-label="Home"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M3 11l9-7 9 7v9a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1z" fill="currentColor"/></svg></a>
+    <a href="#projects" data-nav aria-label="Projects"><svg viewBox="0 0 24 24" width="20" height="20"><rect x="3" y="4" width="18" height="6" rx="1.5" fill="currentColor"/><rect x="3" y="14" width="8" height="6" rx="1.5" fill="currentColor"/><rect x="13" y="14" width="8" height="6" rx="1.5" fill="currentColor"/></svg></a>
+    <a href="#skills" data-nav aria-label="Skills"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z" fill="currentColor"/></svg></a>
+    <a href="#saved" data-nav aria-label="Saved"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 3h12v18l-6-4-6 4z" fill="currentColor"/></svg></a>
+    <a href="#activity" data-nav aria-label="Activity"><svg viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+    <a href="#contact" data-nav aria-label="Contact"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M3 6l9 6 9-6" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/></svg></a>
+  </nav>
+
+</div>
+
+<!-- PROJECT DRAWER -->
+<div id="projectDrawer" class="drawer" aria-hidden="true">
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+    <button class="drawer-close" id="drawerClose" aria-label="Close">✕</button>
+    <div id="drawerContent"></div>
+  </div>
+</div>
+
+<!-- CERT LIGHTBOX -->
+<div id="certLightbox" class="cert-lightbox" aria-hidden="true">
+  <div class="cert-lightbox-backdrop"></div>
+  <div class="cert-lightbox-inner" role="dialog" aria-modal="true">
+    <button id="certLightboxClose" class="drawer-close" aria-label="Close">✕</button>
+    <img id="certLightboxImg" src="" alt="" />
+    <p id="certLightboxCaption" class="cert-lightbox-caption"></p>
+  </div>
+</div>
+
+<!-- TOASTS -->
+<div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
